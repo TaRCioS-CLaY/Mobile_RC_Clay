@@ -7,7 +7,7 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-browsersync": {
       "PACKAGE_NAME": "TaRCiosClaY.com.github"
     }
   },
