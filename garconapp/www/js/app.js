@@ -8,7 +8,7 @@ $('.collection')
 
         $badge.text(parseInt($badge.text()) + 1);
         var nomeProduto = this.firstChild.textContent;
-        M.toast({ html: nomeProduto + ' adicionado', classes: 'rounded' });
+        M.toast({ html: nomeProduto + ' adicionado', classes: 'rounded', displayLength: 1300});
     });
 
 $('.collection')
@@ -30,10 +30,10 @@ $(document).ready(function () {
 });
 
 $('#confirmar').on('click', function () {
-    let texto = [];
+    var texto = "";
     $('.badge').parent().each(function () {
-        texto.push(' ' + this.firstChild.textContent);
-        console.log(texto);
+        texto += this.firstChild.textContent + ':	';
+        texto += this.lastChild.textContent + ',	';
     });
     $('#resumo').empty().text(texto);
 });
