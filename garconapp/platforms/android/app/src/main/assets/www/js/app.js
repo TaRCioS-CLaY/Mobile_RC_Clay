@@ -8,7 +8,7 @@ $('.collection')
 
         $badge.text(parseInt($badge.text()) + 1);
         var nomeProduto = this.firstChild.textContent;
-        M.toast({ html: nomeProduto + ' adicionado', classes: 'rounded' });
+        M.toast({ html: nomeProduto + ' adicionado', classes: 'rounded', displayLength: 1300 });
     });
 
 $('.collection')
@@ -30,12 +30,45 @@ $(document).ready(function () {
 });
 
 $('#confirmar').on('click', function () {
-    let texto = [];
+    var texto = "";
     $('.badge').parent().each(function () {
-        texto.push(' ' + this.firstChild.textContent);
-        console.log(texto);
+        texto += this.firstChild.textContent + ':	';
+        texto += this.lastChild.textContent + ',	';
     });
     $('#resumo').empty().text(texto);
 });
 
 $('.dropdown-trigger').dropdown();
+
+$('.scan-qrcode').on('click', function () {
+    cordova.plugins.barcodeScanner.scan(
+        function (resultado) {
+            if (resultado.text) {
+                M.toast({ html: 'Mesa	' + resultado.text });
+                $('#numero-mesa').val(resultado.text);
+            }
+        },
+        function (error) {
+            M.toast({ html: 'Erro:	' + error });
+        }
+    );
+});
+$('.acao-finalizar').on('click', function () {
+    $.ajax({
+        url: 'http://cozinhapp.sergiolopes.org/novo-pedido',
+        type: 'GET',
+        dataType: 'JSON',
+        data: {
+            mesa: $('#numero-mesa').val(),
+            pedido: $('#resumo').text()
+        },
+        error: function (erro) {
+            M.toast({html: erro.responseText});
+        },
+        success: function (dados) {
+            M.toast({html: dados});
+            $('#numero-mesa').val('');
+            $('.badge').remove();
+        }
+    });
+});

@@ -1,11 +1,12 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Aps Mobile Garcon App",
-  "short_name": "Aps Mobile Garcon App",
+  "name": "Garçon App",
+  "short_name": "Garçon App",
   "version": "TaRCiosClaY.com.github",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
+  "description": "Aps Mobile",
+  "author": "Clayton Inácio",
   "icons": [],
+  "orientation": "portrait",
   "start_url": "index.html"
 }

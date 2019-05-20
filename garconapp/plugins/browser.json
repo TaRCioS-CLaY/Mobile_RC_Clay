@@ -9,6 +9,15 @@
   "installed_plugins": {
     "cordova-plugin-browsersync": {
       "PACKAGE_NAME": "TaRCiosClaY.com.github"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "TaRCiosClaY.com.github"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "TaRCiosClaY.com.github"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "TaRCiosClaY.com.github"
     }
   },
   "dependent_plugins": {}
