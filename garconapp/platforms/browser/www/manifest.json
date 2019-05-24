@@ -8,5 +8,6 @@
   "author": "Clayton Inácio",
   "icons": [],
   "orientation": "portrait",
-  "start_url": "index.html"
+  "start_url": "index.html",
+  "theme_color": "#E86C13"
 }

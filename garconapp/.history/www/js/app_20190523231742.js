@@ -73,11 +73,11 @@ $('.acao-finalizar').on('click', function () {
     });
 });
 $('#tab_bolos').on('click', function(){
-    $('#bebidas').addClass("invisivel");
-    $('#bolos').removeClass("invisivel");
+    $('#bebidas').hide();
+    $('#bolos').show();
 });
 $('#tab_bebidas').on('click', function(){
-    $('#bolos').addClass("invisivel");
-    $('#bebidas').removeClass("invisivel");
+    $('#bolos').hide();
+    $('#bebidas').show();
 });
 // $('#ele_id').hide();

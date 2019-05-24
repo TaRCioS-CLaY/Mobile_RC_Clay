@@ -72,12 +72,6 @@ $('.acao-finalizar').on('click', function () {
         }
     });
 });
-$('#tab_bolos').on('click', function(){
-    $('#bebidas').addClass("invisivel");
-    $('#bolos').removeClass("invisivel");
-});
-$('#tab_bebidas').on('click', function(){
-    $('#bolos').addClass("invisivel");
-    $('#bebidas').removeClass("invisivel");
-});
+
+$('#bolos').hide();
 // $('#ele_id').hide();

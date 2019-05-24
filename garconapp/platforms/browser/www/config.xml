@@ -14,4 +14,7 @@
     <allow-intent href="https://*/*" />
     <preference name="Orientation" value="portrait" />
     <preference name="Fullscreen" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#E86C13" />
+    <preference name="StatusBarStyle" value="lightcontent" />
 </widget>
